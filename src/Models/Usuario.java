@@ -28,6 +28,13 @@ public class Usuario extends Pessoa {
         this.nivelAcesso = nivelAcesso;
     }
 
+    public Usuario(int id, String senha, String nome) {
+        super(id, nome);
+        this.senha = senha;
+    }
+    
+    
+
     public String getSenha() {
         return senha;
     }
