@@ -23,7 +23,7 @@ public class MenuPrincipalController {
         
         Agenda agenda = new Agenda();
         agenda.setVisible(true);
-        this.view.dispose();
+        
     
     }
     

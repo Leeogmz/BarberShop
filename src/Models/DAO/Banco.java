@@ -32,9 +32,10 @@ public class Banco {
         agendamento = new ArrayList<Agendamento>();
         
         //criando elementos
-        Usuario usuario3 = new Usuario(3, "leonardo", 'M', "09/05/1999", "30212122", "barbeiro@leonardo.com", "521454124", "teste", "administrador");
+        
         Usuario usuario1 = new Usuario(1, "barbeiro", 'M', "09/05/1996", "30212121", "barbeiro@barbershop.com", "521454123", "barbeiro", "administrador");
         Usuario usuario2 = new Usuario(2, "estagiario", 'M', "09/05/1996", "30212122", "estagiario@barbershop.com", "451244123", "estagiario", "funcionario");
+        Usuario usuario3 = new Usuario(3, "leonardo", 'M', "09/05/1999", "30212122", "barbeiro@leonardo.com", "521454124", "leonardo", "administrador");
          
         Cliente cliente1 = new Cliente(1, "Alan Figueiredo", 'M', "30/01/1995", "30212126", "tiagoluz.h607@gmail.com", "5142487", "Rua jaboti 35 Canudos NH",  "93300012");
         Cliente cliente2 = new Cliente(2, "Judite Oliveira", 'F', "30/08/1994", "30212127", "juditeoliveirapet@gmail.com", "5142487745", "Rua campo bom 78 Centro NH",  "93300045");
@@ -59,9 +60,9 @@ public class Banco {
         Agendamento agendamento3 = new Agendamento(3, cliente4, servico1, 18, "14/07/2018 10:30");
         
         //Adiciona Elementos na lista
-        usuario.add(usuario1);
-        usuario.add(usuario2);
         usuario.add(usuario3);
+        usuario.add(usuario2);
+        usuario.add(usuario1);
         
         cliente.add(cliente1);
         cliente.add(cliente2);
