@@ -6,7 +6,11 @@ package Controller;
 
 import Controller.Helper.AgendaHelper;
 import Models.Agendamento;
+import Models.Cliente;
 import Models.DAO.AgendamentoDAO;
+import Models.DAO.ClienteDAO;
+import Models.DAO.ServicoDAO;
+import Models.Servico;
 import View.Agenda;
 import java.util.ArrayList;
 
@@ -37,4 +41,25 @@ public class AgendaController {
     
     }
     
+    public void atualizaCliente(){
+    //Busca clientes no banco
+    ClienteDAO clienteDAO = new ClienteDAO();
+        ArrayList<Cliente> clientes = clienteDAO.selectAll();
+        
+        //Exibe cliente na view
+        helper.preencherClientes(clientes);
+    
+    }
+    
+    
+    public void atualizaServico(){
+     //Busca servico no banco
+     ServicoDAO servicoDAO = new ServicoDAO();
+        ArrayList<Servico> servicos = servicoDAO.selectAll();
+        
+        //Exibe servico na view
+        helper.preencherServicos(servicos);
+      
+    
+    } 
 }

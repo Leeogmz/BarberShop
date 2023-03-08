@@ -6,6 +6,7 @@
 package View;
 
 import Controller.AgendaController;
+import javax.swing.JComboBox;
 import javax.swing.JTable;
 
 /**
@@ -102,10 +103,8 @@ public class Agenda extends javax.swing.JFrame {
         });
         getContentPane().add(TextId, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 280, 40));
 
-        TextCliente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alan", "Afonso", "Abigail", "Alexandro" }));
         getContentPane().add(TextCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, 280, 40));
 
-        TextServico.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Barba", "Barba + Corte", "Corte", " " }));
         getContentPane().add(TextServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 350, 280, 40));
 
         TextValor.setText("0");
@@ -234,6 +233,8 @@ public class Agenda extends javax.swing.JFrame {
 
     private void iniciar() {
        this.controller.atualizaTabela();
+       this.controller.atualizaCliente();
+       this.controller.atualizaServico();
     }
 
     public JTable getTableAgendamentos() {
@@ -243,6 +244,24 @@ public class Agenda extends javax.swing.JFrame {
     public void setTableAgendamentos(JTable TableAgendamentos) {
         this.TableAgendamentos = TableAgendamentos;
     }
+
+    public JComboBox<String> getTextCliente() {
+        return TextCliente;
+    }
+
+    public void setTextCliente(JComboBox<String> TextCliente) {
+        this.TextCliente = TextCliente;
+    }
+
+    public JComboBox<String> getTextServico() {
+        return TextServico;
+    }
+
+    public void setTextServico(JComboBox<String> TextServico) {
+        this.TextServico = TextServico;
+    }
+    
+    
     
     
 }
