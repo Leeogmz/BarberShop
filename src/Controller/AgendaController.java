@@ -62,4 +62,16 @@ public class AgendaController {
       
     
     } 
+    
+    public void atualizaValor (){
+    //Obter servico da tela
+   Servico servico = helper.obterServico();
+   helper.setarValor(servico.getValor());
+    
+    
+    
+    //Exibir valor na view
+    }
+
+    
 }

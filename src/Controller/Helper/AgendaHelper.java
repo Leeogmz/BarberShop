@@ -60,17 +60,19 @@ public class AgendaHelper {
         DefaultComboBoxModel comboBoxServico = (DefaultComboBoxModel) view.getTextServico().getModel();
         
         for (Servico servico : servicos) {
-            comboBoxServico.addElement(servico);
-            
-        }
+            comboBoxServico.addElement(servico);            
+        }          
+    }
     
-        
+    public Servico obterServico(){
+    return (Servico) view.getTextServico().getSelectedItem();
+    
+    }
+
+    public void setarValor(float valor) {
+     view.getTextValor().setText(valor + "");
     }
     
     
-
-   
-    
-   
     
 }
