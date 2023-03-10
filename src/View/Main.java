@@ -33,7 +33,7 @@ public class Main {
                 
                 
                 
-        Agendamento agendamento = new Agendamento (1, cliente, servico, "06/03/2023 11:17");        
+        Agendamento agendamento = new Agendamento (1, cliente, servico, 30, "06/03/2023 11:17" , "Obeservacao");        
         
         
         System.out.println(agendamento.getCliente().getNome());

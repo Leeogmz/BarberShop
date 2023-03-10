@@ -23,7 +23,7 @@ public class Agendamento {
     Date data;
     String observacao;
 
-    public Agendamento(int id, Cliente cliente, Servico servico, float valor, String data) {
+    public Agendamento(int id, Cliente cliente, Servico servico, float valor, String data, String observacao) {
         this.id = id;
         this.cliente = cliente;
         this.servico = servico;
@@ -33,13 +33,15 @@ public class Agendamento {
         } catch (ParseException ex) {
             Logger.getLogger(Agendamento.class.getName()).log(Level.SEVERE, null, ex);
         }
+        this.observacao = observacao;
         
     }
 
-    public Agendamento(int id, Cliente cliente, Servico servico, String data) {
+    public Agendamento(int id, Cliente cliente, Servico servico,float valor, String data) {
         this.id = id;
         this.cliente = cliente;
         this.servico = servico;
+        this.valor = valor;
         try {
             this.data = new SimpleDateFormat("dd/mm/yyyy HH:mm").parse(data);
         } catch (ParseException ex) {
